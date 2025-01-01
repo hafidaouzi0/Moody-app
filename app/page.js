@@ -5,6 +5,7 @@ export default function HomePage() {
   return (
       <Main className="">
         <Hero/>
+        hey there
       </Main>
       
   );

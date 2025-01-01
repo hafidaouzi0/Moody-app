@@ -1,4 +1,4 @@
-import { Fugaz_One, Geist, Geist_Mono } from "next/font/google";
+import { Fugaz_One, Geist, Geist_Mono, Open_Sans } from "next/font/google";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -11,7 +11,8 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-const fugaz = Fugaz_One({ subsets: ["latin"],weight:["400"] });
+export const fugaz = Fugaz_One({ subsets: ["latin"],weight:["400"] });
+export const openSans = Open_Sans({ subsets: ["latin"] });
 
 export const metadata = {
   title: "Moody App",
@@ -28,7 +29,7 @@ export default function RootLayout({ children }) {
     </header>
   );
   const footer = (
-    <footer>
+    <footer className="p-4 sm:p-8">
       footer
     </footer>
   )
@@ -36,7 +37,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body
         className={`w-full max-w-[1000px] mx-auto text-sm sm:text-base
-           min-h-screen flex flex-col ${geistSans.variable} ${geistMono.variable} antialiased`}
+           min-h-screen flex flex-col text-slate-800  `+openSans.className}
       >
         {header}
         {children}
