@@ -3,10 +3,9 @@ import Main from "@/components/Main";
 
 export default function HomePage() {
   return (
-      <Main className="">
-        <Hero/>
-        hey there
-      </Main>
-      
+    <Main className="">
+      <Hero />
+    </Main>
+
   );
 }
